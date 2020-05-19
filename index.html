@@ -7,9 +7,9 @@
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="https://v3.bootcss.com/favicon.ico">
+    <link rel="icon" href="resources/pics/favicon.ico">
 
-    <title>Demos of CWS</title>
+    <title>Demos of Channel-wise Subband</title>
 
     <!-- Bootstrap core CSS -->
     <link href="./index/bootstrap.min.css" rel="stylesheet">
@@ -34,10 +34,10 @@
 
     .panel-heading{
 
-        height:100px;
+/*        height:100px;
 
-        width:900px;
-        margin: 20px;
+        width:900px;*/
+        margin: 10px;
 
     }
 
@@ -47,30 +47,41 @@
 
   <body>
 
-    <div class="blog-masthead">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
-        <nav class="blog-nav">
-          <a class="blog-nav-item active" href="https://v3.bootcss.com/examples/blog/#">Home</a>
+        <a class="blog-nav-item active" href="https://v3.bootcss.com/examples/blog/#">Home</a>
 <!--           <a class="blog-nav-item" href="https://v3.bootcss.com/examples/blog/#">New features</a>
           <a class="blog-nav-item" href="https://v3.bootcss.com/examples/blog/#">Press</a>
           <a class="blog-nav-item" href="https://v3.bootcss.com/examples/blog/#">New hires</a> -->
-          <!-- <a class="blog-nav-item" href="https://v3.bootcss.com/examples/blog/#">About</a> -->
+          <a class="blog-nav-item" href="contact.html">Contact</a>
+      </div>
+    </nav>
+
+<!--     <div class="blog-masthead">
+      <div class="container">
+        <nav class="blog-nav">
+          <a class="blog-nav-item active" href="https://v3.bootcss.com/examples/blog/#">Home</a>
+          <a class="blog-nav-item" href="https://v3.bootcss.com/examples/blog/#">New features</a>
+          <a class="blog-nav-item" href="https://v3.bootcss.com/examples/blog/#">Press</a>
+          <a class="blog-nav-item" href="https://v3.bootcss.com/examples/blog/#">New hires</a>
+          <a class="blog-nav-item" href="contact.html">Contact</a>
         </nav>
       </div>
-    </div>
+    </div> -->
 
     <div class="container">
 
       <div class="blog-header">
-        <p class="lead blog-description"><b>The official demos of paper: </b></p>
-        <h1 class="blog-title"><b>Channel-wise Subband Input for Better Voice and Accompaniment Separation on High Resolution Music</b></h1>
+        <p id="top" class="lead blog-description"><b>The official demos of paper: </b></p>
+        <h1  class="blog-title"><b>Channel-wise Subband Input for Better Voice and Accompaniment Separation on High Resolution Music</b></h1>
         
 
       </div>
 
       <div class="row">
 <!-- <hr> -->
-
+<hr>
 <div class="container">
   <h2 class="blog-post-title">Abstract</h2>
   <p style="font-size:20px">
@@ -84,21 +95,26 @@
   </div>
 </div>
 
-
 <hr>
-
 <div class="container blog-main">
             <h2 class="blog-post-title">Demos</h2>
-            <p class="blog-post-meta">Last Update - May 20, 2020 by Haohe Liu</p>
+            <p class="blog-post-meta">Last Update - May 19, 2020 by Haohe Liu</p>
 <div class="panel-group" id="accordion">
   <!-- <h2>Songs outside MUSDB18HQ</h2> -->
   
-<hr>
-  <h3>Pop</h3>
+<!-- <div class="container">
+    
+  </div> -->
+
+  <h3 >Pop</h3>
+  <p style="font-size: 10px;">
+     Note that I'm not professional in music. I just categorise these songs by instinct.
+    </p>
     <div class="panel panel-default">
     <div class="panel-heading">
         <h4 class="panel-title">
-            <div class="col-xs-6">
+            <div class="container">
+              <div class="col-xs-6">
               <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
             Achim Reichel - Aloha Heja He
             </a>
@@ -109,6 +125,7 @@
             </p>
               <audio controls>
                <source src="resources/demos/MIXTURE/SONG_Achim Reichel - Aloha Heja He/Achim Reichel - Aloha Heja He.mp3" type="audio/mp3"></audio>
+            </div>
             </div>
         </h4>
     </div>
@@ -282,6 +299,7 @@
         <div class="panel panel-default">
     <div class="panel-heading">
         <h4 class="panel-title">
+          <div class="container">
             <div class="col-xs-6">
               <a data-toggle="collapse" data-parent="#accordion"
             href="#collapse2">
@@ -295,8 +313,11 @@
               <audio controls>
                <source src="resources/demos/MIXTURE/SONG_Hotel California-Eagles/Hotel California-Eagles.mp3" type="audio/mp3"></audio>
             </div>
+          </div>
+            
         </h4>
     </div>
+
     <div id="collapse2" class="panel-collapse collapse">
         <div class="panel-body">
 
@@ -471,7 +492,8 @@
        <div class="panel panel-default">
     <div class="panel-heading">
         <h4 class="panel-title">
-            <div class="col-xs-6">
+            <div class="container">
+              <div class="col-xs-6">
               <a data-toggle="collapse" data-parent="#accordion"
             href="#collapse3">
             我们-陈奕迅
@@ -483,6 +505,7 @@
             </p>
               <audio controls>
                <source src="resources/demos/MIXTURE/SONG_我们-陈奕迅/我们-陈奕迅.mp3" type="audio/mp3"></audio>
+            </div>
             </div>
         </h4>
     </div>
@@ -660,7 +683,8 @@
     <div class="panel panel-default">
     <div class="panel-heading">
         <h4 class="panel-title">
-            <div class="col-xs-6">
+            <div class="container">
+              <div class="col-xs-6">
               <a data-toggle="collapse" data-parent="#accordion"
             href="#collapse4">
             金玟岐 - 小幸运（Cover 田馥甄）
@@ -672,6 +696,7 @@
             </p>
               <audio controls>
                <source src="resources/demos/MIXTURE/SONG_金玟岐 - 小幸运（Cover 田馥甄）/金玟岐 - 小幸运（Cover 田馥甄）.mp3" type="audio/mp3"></audio>
+            </div>
             </div>
         </h4>
     </div>
@@ -850,7 +875,8 @@
    <div class="panel panel-default">
     <div class="panel-heading">
         <h4 class="panel-title">
-            <div class="col-xs-6">
+            <div class="container">
+              <div class="col-xs-6">
               <a data-toggle="collapse" data-parent="#accordion"
             href="#collapse5">
             Imagine Dragons,Kaskade - Believer (Kaskade Remix)
@@ -862,6 +888,7 @@
             </p>
               <audio controls>
                <source src="resources/demos/MIXTURE/SONG_Imagine Dragons,Kaskade - Believer (Kaskade Remix)/Imagine Dragons,Kaskade - Believer (Kaskade Remix).mp3" type="audio/mp3"></audio>
+            </div>
             </div>
         </h4>
     </div>
@@ -1038,7 +1065,8 @@
     <div class="panel panel-default">
     <div class="panel-heading">
         <h4 class="panel-title">
-            <div class="col-xs-6">
+            <div class="container">
+              <div class="col-xs-6">
               <a data-toggle="collapse" data-parent="#accordion"
             href="#collapse6">
             南征北战NZBZ - 我的天空
@@ -1050,6 +1078,7 @@
             </p>
               <audio controls>
                <source src="resources/demos/MIXTURE/SONG_南征北战NZBZ - 我的天空/南征北战NZBZ - 我的天空.mp3" type="audio/mp3"></audio>
+            </div>
             </div>
         </h4>
     </div>
@@ -1228,7 +1257,8 @@
      <div class="panel panel-default">
     <div class="panel-heading">
         <h4 class="panel-title">
-            <div class="col-xs-6">
+            <div class="container">
+              <div class="col-xs-6">
               <a data-toggle="collapse" data-parent="#accordion"
             href="#collapse7">
             Blazo,CL - Deacon Blu
@@ -1240,6 +1270,7 @@
             </p>
               <audio controls>
                <source src="resources/demos/MIXTURE/SONG_Blazo,CL - Deacon Blu/Blazo,CL - Deacon Blu.mp3" type="audio/mp3"></audio>
+            </div>
             </div>
         </h4>
     </div>
@@ -1414,7 +1445,8 @@
         <div class="panel panel-default">
     <div class="panel-heading">
         <h4 class="panel-title">
-            <div class="col-xs-6">
+            <div class="container">
+              <div class="col-xs-6">
               <a data-toggle="collapse" data-parent="#accordion"
             href="#collapse8">
             Logic - Beggin'
@@ -1426,6 +1458,7 @@
             </p>
               <audio controls>
                <source src="resources/demos/MIXTURE/SONG_Logic - Beggin'/Logic - Beggin'.mp3" type="audio/mp3"></audio>
+            </div>
             </div>
         </h4>
     </div>
@@ -1605,7 +1638,8 @@
       <div class="panel panel-default">
     <div class="panel-heading">
         <h4 class="panel-title">
-            <div class="col-xs-6">
+            <div class="container">
+              <div class="col-xs-6">
               <a data-toggle="collapse" data-parent="#accordion"
             href="#collapse9">
             Beyond - 海阔天空
@@ -1617,6 +1651,7 @@
             </p>
               <audio controls>
                <source src="resources/demos/MIXTURE/SONG_Beyond - 海阔天空/Beyond - 海阔天空.mp3" type="audio/mp3"></audio>
+            </div>
             </div>
         </h4>
     </div>
@@ -1790,7 +1825,8 @@
     <div class="panel panel-default">
     <div class="panel-heading">
         <h4 class="panel-title">
-            <div class="col-xs-6">
+            <div class="container">
+              <div class="col-xs-6">
               <a data-toggle="collapse" data-parent="#accordion"
             href="#collapse10">
             majiko - アイロニ
@@ -1802,6 +1838,7 @@
             </p>
               <audio controls>
                <source src="resources/demos/MIXTURE/SONG_majiko - アイロニ/majiko - アイロニ.mp3" type="audio/mp3"></audio>
+            </div>
             </div>
         </h4>
     </div>
@@ -1979,7 +2016,8 @@
    <div class="panel panel-default">
     <div class="panel-heading">
         <h4 class="panel-title">
-            <div class="col-xs-6">
+            <div class="container">
+              <div class="col-xs-6">
               <a data-toggle="collapse" data-parent="#accordion"
             href="#collapse11">
             郝云_-_活着
@@ -1991,6 +2029,7 @@
             </p>
               <audio controls>
                <source src="resources/demos/MIXTURE/SONG_郝云_-_活着/郝云_-_活着.mp3" type="audio/mp3"></audio>
+            </div>
             </div>
         </h4>
     </div>
@@ -2170,7 +2209,8 @@
         <div class="panel panel-default">
     <div class="panel-heading">
         <h4 class="panel-title">
-            <div class="col-xs-6">
+            <div class="container">
+              <div class="col-xs-6">
               <a data-toggle="collapse" data-parent="#accordion"
             href="#collapse12">
             Queen_-_We_Will_Rock_You
@@ -2182,6 +2222,7 @@
             </p>
               <audio controls>
                <source src="resources/demos/MIXTURE/SONG_Queen_-_We_Will_Rock_You/Queen_-_We_Will_Rock_You.mp3" type="audio/mp3"></audio>
+            </div>
             </div>
         </h4>
     </div>
@@ -2357,7 +2398,8 @@
     <div class="panel panel-default">
     <div class="panel-heading">
         <h4 class="panel-title">
-            <div class="col-xs-6">
+            <div class="container">
+              <div class="col-xs-6">
               <a data-toggle="collapse" data-parent="#accordion"
             href="#collapse13">
             ROCK2-Kasabian_-_Underdog
@@ -2369,6 +2411,7 @@
             </p>
               <audio controls>
                <source src="resources/demos/MIXTURE/SONG_ROCK2-Kasabian_-_Underdog/ROCK2-Kasabian_-_Underdog.mp3" type="audio/mp3"></audio>
+            </div>
             </div>
         </h4>
     </div>
@@ -2546,7 +2589,8 @@
      <div class="panel panel-default">
     <div class="panel-heading">
         <h4 class="panel-title">
-            <div class="col-xs-6">
+            <div class="container">
+              <div class="col-xs-6">
               <a data-toggle="collapse" data-parent="#accordion"
             href="#collapse14">
             Fingazz - I Can Make Ya
@@ -2558,6 +2602,7 @@
             </p>
               <audio controls>
                <source src="resources/demos/MIXTURE/SONG_Fingazz - I Can Make Ya/Fingazz - I Can Make Ya.mp3" type="audio/mp3"></audio>
+            </div>
             </div>
         </h4>
     </div>
@@ -2735,7 +2780,8 @@
       <div class="panel panel-default">
     <div class="panel-heading">
         <h4 class="panel-title">
-            <div class="col-xs-6">
+            <div class="container">
+              <div class="col-xs-6">
               <a data-toggle="collapse" data-parent="#accordion"
             href="#collapse15">
             Come And Get Your Love-Redbone
@@ -2747,6 +2793,7 @@
             </p>
               <audio controls>
                <source src="resources/demos/MIXTURE/SONG_Come And Get Your Love-Redbone/Come And Get Your Love-Redbone.mp3" type="audio/mp3"></audio>
+            </div>
             </div>
         </h4>
     </div>
@@ -2920,7 +2967,8 @@
     <div class="panel panel-default">
     <div class="panel-heading">
         <h4 class="panel-title">
-            <div class="col-xs-6">
+            <div class="container">
+              <div class="col-xs-6">
               <a data-toggle="collapse" data-parent="#accordion"
             href="#collapse16">
             MOCCA - I Remember
@@ -2932,6 +2980,7 @@
             </p>
               <audio controls>
                <source src="resources/demos/MIXTURE/SONG_MOCCA - I Remember/MOCCA - I Remember.mp3" type="audio/mp3"></audio>
+            </div>
             </div>
         </h4>
     </div>
@@ -3107,7 +3156,8 @@
     <div class="panel panel-default">
     <div class="panel-heading">
         <h4 class="panel-title">
-            <div class="col-xs-6">
+            <div class="container">
+              <div class="col-xs-6">
               <a data-toggle="collapse" data-parent="#accordion"
             href="#collapse17">
             ハンバート ハンバート - ゆうべは俺が悪かった
@@ -3119,6 +3169,7 @@
             </p>
               <audio controls>
                <source src="resources/demos/MIXTURE/SONG_ハンバート ハンバート - ゆうべは俺が悪かった/ハンバート ハンバート - ゆうべは俺が悪かった.mp3" type="audio/mp3"></audio>
+            </div>
             </div>
         </h4>
     </div>
@@ -3293,7 +3344,8 @@
    <div class="panel panel-default">
     <div class="panel-heading">
         <h4 class="panel-title">
-            <div class="col-xs-6">
+            <div class="container">
+              <div class="col-xs-6">
               <a data-toggle="collapse" data-parent="#accordion"
             href="#collapse18">
             柴田淳_-_冷めたスープ
@@ -3305,6 +3357,7 @@
             </p>
               <audio controls>
                <source src="resources/demos/MIXTURE/SONG_柴田淳_-_冷めたスープ/柴田淳_-_冷めたスープ.mp3" type="audio/mp3"></audio>
+            </div>
             </div>
         </h4>
     </div>
@@ -3491,7 +3544,8 @@
     <div class="panel panel-default">
     <div class="panel-heading">
         <h4 class="panel-title">
-            <div class="col-xs-6">
+            <div class="container">
+              <div class="col-xs-6">
               <a data-toggle="collapse" data-parent="#accordion"
             href="#collapse19">
             Tom McKenzie - Directions
@@ -3503,6 +3557,7 @@
             </p>
               <audio controls>
                <source src="resources/demos/MIXTURE/MUSDB_Tom McKenzie - Directions/Tom McKenzie - Directions.mp3" type="audio/mp3"></audio>
+            </div>
             </div>
         </h4>
     </div>
@@ -3680,7 +3735,8 @@
     <div class="panel panel-default">
     <div class="panel-heading">
         <h4 class="panel-title">
-            <div class="col-xs-6">
+            <div class="container">
+              <div class="col-xs-6">
               <a data-toggle="collapse" data-parent="#accordion"
             href="#collapse20">
             Nerve 9 - Pray For The Rain
@@ -3692,6 +3748,7 @@
             </p>
               <audio controls>
                <source src="resources/demos/MIXTURE/MUSDB_Nerve 9 - Pray For The Rain/Nerve 9 - Pray For The Rain.mp3" type="audio/mp3"></audio>
+            </div>
             </div>
         </h4>
     </div>
@@ -3864,14 +3921,11 @@
     </div>
 
 
-
-
-
-
         <div class="panel panel-default">
     <div class="panel-heading">
         <h4 class="panel-title">
-            <div class="col-xs-6">
+            <div class="container">
+              <div class="col-xs-6">
               <a data-toggle="collapse" data-parent="#accordion"
             href="#collapse21">
             Bobby Nobody - Stitch Up
@@ -3883,6 +3937,7 @@
             </p>
               <audio controls>
                <source src="resources/demos/MIXTURE/MUSDB_Bobby Nobody - Stitch Up/Bobby Nobody - Stitch Up.mp3" type="audio/mp3"></audio>
+            </div>
             </div>
         </h4>
     </div>
@@ -4054,6 +4109,7 @@
         </div>
     </div>
 
+  
 
 </div>
 
@@ -4143,9 +4199,9 @@
     </div>
 
     <footer class="blog-footer">
-      <p>The experiments are sponsered by  <a href="http://getbootstrap.com/">aslp</a> 
+      <p>The experiments are sponsered by  <a href="http://wiki.nwpu-aslp.org/mediawiki/index.php/%E9%A6%96%E9%A1%B5">aslp</a> 
       <p>
-        <a href="#collapsethree">Back to top</a>
+        <a href="#top">Back to top</a>
       </p>
     </footer>
 
