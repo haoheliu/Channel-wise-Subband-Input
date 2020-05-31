@@ -5,7 +5,7 @@
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
   color: #555;
-  padding-top: 120px;
+  /*padding-top: 120px;*/
 }
 
 h1, .h1,
@@ -21,7 +21,7 @@ h6, .h6 {
 }
 
 .navbar-default {
-    background-color: #01090c;
+    /*background-color: #01090c;*/
     border-color: #efe8ed;
     font-size: 20px;
 }
@@ -51,12 +51,14 @@ h6, .h6 {
   position: relative;
   display: inline-block;
   padding: 10px;
-  font-weight: 500;
-  color: #cdddeb;
+  font-size: 25px;
+  font-weight: 700;
+  /*color: #cdddeb;*/
+  color: #000000;
 }
 .blog-nav-item:hover,
 .blog-nav-item:focus {
-  color: #fff;
+  color: #cdddeb;
   text-decoration: none;
 }
 

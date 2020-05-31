@@ -10,6 +10,7 @@
     <link rel="icon" href="resources/pics/favicon.ico">
 
     <title>Demos of Channel-wise Subband</title>
+    
 
     <!-- Bootstrap core CSS -->
     <link href="./index/bootstrap.min.css" rel="stylesheet">
@@ -19,7 +20,7 @@
 
     <!-- Custom styles for this template -->
     <link href="./index/blog.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="./index/ie-emulation-modes-warning.js"></script>
@@ -33,12 +34,17 @@
     <style>
 
     .panel-heading{
-
 /*        height:100px;
 
         width:900px;*/
         margin: 10px;
-
+    }
+    .table_of_content_h1{
+      font-size: 20px;
+      font-weight: 700;
+    }
+    .table_of_content_h2{
+      font-size: 17px;
     }
 
 </style>
@@ -47,17 +53,31 @@
 
   <body>
 
+<script type="text/javascript">
+      function js_tab(num){
+        for (var i=0;i<num*4;i++){
+          document.write("&nbsp;")
+        }
+      }
+    </script>
 
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <a class="blog-nav-item active" href="https://v3.bootcss.com/examples/blog/#">Home</a>
+<!-- <i class="fa fa-car"></i>
+<i class="fa fa-car" style="font-size:48px;"></i>
+<i class="fa fa-car" style="font-size:60px;color:red;"></i>
+
+ -->
+    <!-- <nav class="navbar navbar-default navbar-fixed-top"> -->
+    <nav class="navbar navbar-fixed-top navbar-transparent">
+      <div class="container" style="margin-left: 0px;">
+        <i class="fa fa-home" style="font-size: 25px;"></i><a class="blog-nav-item active" href="index.html">Home</a>
 <!--           <a class="blog-nav-item" href="https://v3.bootcss.com/examples/blog/#">New features</a>
           <a class="blog-nav-item" href="https://v3.bootcss.com/examples/blog/#">Press</a>
           <a class="blog-nav-item" href="https://v3.bootcss.com/examples/blog/#">New hires</a> -->
-          <a class="blog-nav-item" href="contact.html">Contact</a>
+          <p><i class="fa fa-phone" style="font-size: 25px;"></i><a class="blog-nav-item" href="contact.html">Contact</a></p>
       </div>
     </nav>
 
+    
 <!--     <div class="blog-masthead">
       <div class="container">
         <nav class="blog-nav">
@@ -73,17 +93,62 @@
     <div class="container">
 
       <div class="blog-header">
-        <p id="top" class="lead blog-description"><b>The official demos of paper: </b></p>
-        <h1  class="blog-title"><b>Channel-wise Subband Input for Better Voice and Accompaniment Separation on High Resolution Music</b></h1>
+        <p id="top" class="lead blog-description"><i class="fa fa-book"></i><b> The official demos of paper: </b></p>
+        <h1  class="blog-title"><b> Channel-wise Subband Input for Better Voice and Accompaniment Separation on High Resolution Music</b></h1>
         
 
       </div>
-
-      <div class="row">
+      <hr>
+      <div class="container">
+        <h2 class="blog-post-title">Table of Contents</h2>
+        <p class="table_of_content_h1">
+          <script type="text/javascript">document.getElementById("js_tab").innerHTML = js_tab(1)</script>
+          <a href="#abstract">Abstract</a>
+        </p>
+            <p class="table_of_content_h2">
+              <script type="text/javascript">document.getElementById("js_tab").innerHTML = js_tab(2)</script>
+              <a href="#abstract">Link to our paper</a>
+            </p>
+        <p class="table_of_content_h1">
+          <script type="text/javascript">document.getElementById("js_tab").innerHTML = js_tab(1)</script>
+          <a href="#demo-paper">Demos - The experiments in our paper</a>
+        </p>
+            <p class="table_of_content_h2">
+              <script type="text/javascript">document.getElementById("js_tab").innerHTML = js_tab(2)</script>
+              Genre:
+              <p class="table_of_content_h2">
+                <script type="text/javascript">document.getElementById("js_tab").innerHTML = js_tab(3)</script>
+              <a href="#pop">Pop</a>,
+              <a href="#rap">Rap</a>,
+              <a href="#rock">Rock</a>,
+              <a href="#electronic">Electronic</a>,
+              <a href="#folk">Folk</a>,
+              <a href="#others">Others</a>
+              </p>
+            </p>
+        <p class="table_of_content_h1">
+          <script type="text/javascript">document.getElementById("js_tab").innerHTML = js_tab(1)</script>
+          <a href="#demo-full">Demos - The best performance we get with larger training set</a>
+        </p>
+            <p class="table_of_content_h2">
+              <script type="text/javascript">document.getElementById("js_tab").innerHTML = js_tab(2)</script>
+              Model:
+              <p class="table_of_content_h2">
+                <script type="text/javascript">document.getElementById("js_tab").innerHTML = js_tab(3)</script>
+                <a href="#full-mdn">MDN_K=4</a> (0.27 million parameters)
+              </p>
+              <p class="table_of_content_h2">
+                <script type="text/javascript">document.getElementById("js_tab").innerHTML = js_tab(3)</script>
+                <a href="#full-unet">Unet-5_K=4</a> (13.3 million parameters)
+              </p>
+            </p>
+            
+      </div>
+      <div class="row"> 
 <!-- <hr> -->
 <hr>
 <div class="container">
-  <h2 class="blog-post-title">Abstract</h2>
+  <h2 id  = "abstract" class="blog-post-title">Abstract</h2>
   <p style="font-size:20px">
     This paper presents a new input format, channel-wise subband input (CWS), for convolutional neural network (CNN) based music source separation (MSS) models in the frequency domain. We aim to address the major issues in CNN-based high-resolution MSS model: high computational cost and weight sharing between distinctly different bands. Specifically in this paper, we decompose the input mixture spectra into several bands and concatenate them channel-wise as the model input. The proposed approach enables effective weight sharing in each subband and introduces more flexibility between channels.  For comparison purposes, we perform voice and accompaniment separation (VAS) on models with different scales, architectures, and CWS settings. The result shows that the CWS input is beneficial in many aspects. Among all our experiments, it enables models to obtain a 6.9% performance gain on average. With even a smaller number of parameters, much smaller training data, and shorter training time, our MDenseNet with 8-bands CWS input still surpasses the original MMDenseNet with a large margin. CWS also reduces computational cost and training time to a large extent, which can considerably expedite the experiment process.
   </p>
@@ -91,23 +156,24 @@
     Index Terms: voice and accompaniment separation, deep learning, subband, music source separation
   </p> -->
   <div>
-    <b>For more details, please refer to</b> <a href="resources/paper/Paper-Channel-wise Subband Input for Better Voice and Accompaniment Separation on High Resolution Music.pdf"><b>our paper</b></a>.
+    <b>For more details, please refer to our paper: </b> <a href="resources/paper/Paper-Channel-wise Subband Input for Better Voice and Accompaniment Separation on High Resolution Music.pdf" id="paper"><i style="font-size: 20px;" class="fa fa-external-link"></i></a>
   </div>
 </div>
 
+<!-- <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=86 src="http://music.163.com/outchain/player?type=2&id=441437222&auto=1&height=66"></iframe> -->
+
 <hr>
-<div class="container blog-main">
-            <h2 class="blog-post-title">Demos</h2>
+<div id="demo-paper" class="container blog-main">
+            <h2 class="blog-post-title">Demos - The experiments in this paper</h2>
             <p class="blog-post-meta">Last Update - May 19, 2020 by Haohe Liu</p>
             <p><b>Click on the music you'd like to listen and you will see a full list of experiment results.</b></p>
 <div class="panel-group" id="accordion">
   <!-- <h2>Songs outside MUSDB18HQ</h2> -->
   
 <!-- <div class="container">
-    
   </div> -->
 
-  <h3 >Pop</h3>
+  <h3 id="pop">Pop</h3>
   <p style="font-size: 10px;">
      Note that I'm not professional in music. I just categorise these songs by instinct.
     </p>
@@ -1261,7 +1327,7 @@
 
 
 <hr>
-  <h3>Rap</h3>
+  <h3 id="rap">Rap</h3>
 
      <div class="panel panel-default">
     <div class="panel-heading">
@@ -1644,7 +1710,7 @@
 
 
 <hr>
-  <h3>Rock</h3>
+  <h3 id="rock">Rock</h3>
 
       <div class="panel panel-default">
     <div class="panel-heading">
@@ -2600,7 +2666,7 @@
     </div>
 
 <hr>
-  <h3>Electronic</h3>
+  <h3 id="electronic">Electronic</h3>
 
      <div class="panel panel-default">
     <div class="panel-heading">
@@ -2792,7 +2858,7 @@
     </div>
 
 <hr>
-  <h3>Folk</h3>
+  <h3 id="folk">Folk</h3>
 
       <div class="panel panel-default">
     <div class="panel-heading">
@@ -3551,7 +3617,7 @@
     </div>
 
 <hr>
-  <h3>Others</h3>
+  <h3 id="others">Others</h3>
 
     
 
@@ -4133,7 +4199,23 @@
         </div>
     </div>
 
-  
+<hr>
+    <div class="container blog-main">
+                <h2 class="blog-post-title">Demos - The best performance we get with full dataset</h2>
+                <p class="blog-post-meta">Last Update - May 31, 2020 by Haohe Liu</p>
+                <p>We trained our model on additional data (Compared with MUSDB only) with 35.18 hours of pure vocal and 279.87 hours of pure music. Each of these experiments take approximately five days on a single GTX 1080Ti GPU. Finally we reach the following result.</p>
+
+    <h3 id="full-mdn">MDN_K=4</h3>      
+      <div class="panel-group" id="accordion">
+
+      </div>
+    <hr>
+    <h3 id="full-unet">UNET-5_K=4</h3>      
+      <div class="panel-group" id="accordion">
+
+      </div>
+
+    </div>
 
 </div>
 
