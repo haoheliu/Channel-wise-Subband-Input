@@ -88,15 +88,15 @@
     <h2 class="blog-post-title"><i class="fa fa-book" style="font-size: 30px;"></i> Table of Contents</h2> 
     <p class="table_of_content_h1"> <script type="text/javascript">document.getElementById("js_tab").innerHTML = js_tab(1)</script> <a href="#abstract">Abstract</a> </p> 
     <p class="table_of_content_h2"> <script type="text/javascript">document.getElementById("js_tab").innerHTML = js_tab(2)</script> <a href="#paper">Link to our paper</a> </p> 
-    <p class="table_of_content_h1"> <script type="text/javascript">document.getElementById("js_tab").innerHTML = js_tab(1)</script> <a href="#demo-paper">Demos - The experiments in our paper</a> </p> 
-    <p class="table_of_content_h2"> <script type="text/javascript">document.getElementById("js_tab").innerHTML = js_tab(2)</script> Genre: </p>
-    <p class="table_of_content_h2"> <script type="text/javascript">document.getElementById("js_tab").innerHTML = js_tab(3)</script> <a href="#pop">Pop</a>, <a href="#rap">Rap</a>, <a href="#rock">Rock</a>, <a href="#electronic">Electronic</a>, <a href="#folk">Folk</a>, <a href="#others">Others</a> </p> 
-    <p></p> 
     <p class="table_of_content_h1"> <script type="text/javascript">document.getElementById("js_tab").innerHTML = js_tab(1)</script> <a href="#demo-full">Demos - The best performance we get with larger training set</a> </p> 
     <p class="table_of_content_h2"> <script type="text/javascript">document.getElementById("js_tab").innerHTML = js_tab(2)</script> Model: </p>
     <p class="table_of_content_h2"> <script type="text/javascript">document.getElementById("js_tab").innerHTML = js_tab(3)</script> <a href="#demo-full">MDN_K=4</a> (0.27 million parameters) </p> 
     <p class="table_of_content_h2"> <script type="text/javascript">document.getElementById("js_tab").innerHTML = js_tab(3)</script> <a href="#demo-full">Unet-5_K=4</a> (13.3 million parameters) </p> 
+    <p class="table_of_content_h1"> <script type="text/javascript">document.getElementById("js_tab").innerHTML = js_tab(1)</script> <a href="#demo-paper">Demos - The experiments in our paper</a> </p> 
+    <p class="table_of_content_h2"> <script type="text/javascript">document.getElementById("js_tab").innerHTML = js_tab(2)</script> Genre: </p>
+    <p class="table_of_content_h2"> <script type="text/javascript">document.getElementById("js_tab").innerHTML = js_tab(3)</script> <a href="#pop">Pop</a>, <a href="#rap">Rap</a>, <a href="#rock">Rock</a>, <a href="#electronic">Electronic</a>, <a href="#folk">Folk</a>, <a href="#others">Others</a> </p> 
     <p></p> 
+    
    </div> 
    <!-- <hr> --> 
    <hr /> 
@@ -116,6 +116,107 @@
    <div class="alert alert-danger" role="alert"><p style="font-size: 20px;"><i class="fa fa-exclamation-triangle"></i> For users from Main Land China: Hi, you can visit <a href="http://haoheliu.gitee.io/channel-wise-subband-input/">this site <i class="fa fa-external-link"></i></a> for better user experience.</p></div>
    <div class="alert alert-info" role="alert"><p style="font-size: 20px;"><i class="fa fa-heart"></i> Please allow up to two minutes for the audios to get ready, thanks for your patience!</p></div>
    <hr>
+    <div class="container blog-main"> 
+      <h2 id="demo-full" class="blog-post-title">Demos - The best performance we get with full dataset</h2> 
+      <p class="blog-post-meta">Last Update - June 1st, 2020 by Haohe Liu</p> 
+      <p>We trained our model on additional data (Compared with MUSDB only) with 35.18 hours of pure vocal and 279.87 hours of pure music. Each of these experiments take approximately five days on a single GTX 1080Ti GPU. Finally we reach the following result.</p> 
+      <p>Due to the copyright issues, we can not present full length of each mixture. But we offer links for each song. Check the "<i class="fa fa-external-link"></i>" button behind each song to get access to the mixture.</p>
+      <!-- <h3 id="full-unet">UNET-5_K=4</h3>       --> 
+      <div class="panel-group" id="accordion"> 
+
+       <div class="panel panel-default"> 
+        <div class="panel-heading"> 
+         <h4 class="panel-title"> 
+          <div class="container"> 
+           <a data-toggle="collapse" data-parent="#accordion" href="#full-unet"> UNET-5_K=4 <p style="font-size: 12px">(click to expand)</p> </a> 
+          </div> </h4> 
+        </div> 
+        <div id="full-unet" class="panel-collapse collapse"> 
+         <div class="panel-body"> 
+          <table class="table table-striped"> 
+           <tbody>
+            <tr> 
+             <th>Song</th> 
+             <th>Accompaniments</th> 
+             <th>Vocal</th> 
+            </tr>
+            <tr> 
+            </tr>
+            <tr> 
+             <td>小幸运 <a href="https://music.163.com/#/song?id=422104315"><i class="fa fa-external-link"></i></a></td> 
+             <td>
+              <audio controls=""> 
+               <source src="resources/demos/BD_FULL-UNET-5_K=4/background_金玟岐 - 小幸运（Cover 田馥甄）.mp3" type="audio/mp3"></source>
+              </audio> </td> 
+             <td>
+              <audio controls=""> 
+               <source src="resources/demos/BD_FULL-UNET-5_K=4/vocal_金玟岐 - 小幸运（Cover 田馥甄）.mp3" type="audio/mp3"></source>
+              </audio> </td> 
+            </tr>   
+            <tr> 
+             <td>学猫叫 <a href="https://music.163.com/song?id=554191055"><i class="fa fa-external-link"></i></a></td> 
+             <td>
+              <audio controls=""> 
+               <source src="resources/demos/BD_FULL-UNET-5_K=4/background_学猫叫.mp3" type="audio/mp3"></source>
+              </audio> </td> 
+             <td>
+              <audio controls=""> 
+               <source src="resources/demos/BD_FULL-UNET-5_K=4/vocal_学猫叫.mp3" type="audio/mp3"></source>
+              </audio> </td> 
+            </tr> 
+            
+           </tbody>
+          </table> 
+        </div>
+      </div>
+
+      <div class="panel panel-default"> 
+        <div class="panel-heading"> 
+         <h4 class="panel-title"> 
+          <div class="container"> 
+           <a data-toggle="collapse" data-parent="#accordion" href="#full-mdn"> MDN_K=4 <p style="font-size: 12px">(click to expand)</p> </a> 
+          </div> </h4> 
+        </div> 
+        <div id="full-mdn" class="panel-collapse collapse"> 
+         <div class="panel-body"> 
+          <table class="table table-striped"> 
+           <tbody>
+            <tr> 
+             <th>Song</th> 
+             <th>Accompaniments</th> 
+             <th>Vocal</th> 
+            </tr>
+            <tr> 
+            </tr>
+            <tr> 
+             <td>小幸运 <a href="https://music.163.com/#/song?id=422104315"><i class="fa fa-external-link"></i></a></td> 
+             <td>
+              <audio controls=""> 
+               <source src="resources/demos/BD_FULL-MDN_K=4/background_金玟岐 - 小幸运（Cover 田馥甄）.mp3" type="audio/mp3"></source>
+              </audio> </td> 
+             <td>
+              <audio controls=""> 
+               <source src="resources/demos/BD_FULL-MDN_K=4/vocal_金玟岐 - 小幸运（Cover 田馥甄）.mp3" type="audio/mp3"></source>
+              </audio> </td> 
+            </tr> 
+            <tr> 
+             <td>学猫叫 <a href="https://music.163.com/song?id=554191055"><i class="fa fa-external-link"></i></a></td> 
+             <td>
+              <audio controls=""> 
+               <source src="resources/demos/BD_FULL-MDN_K=4/background_学猫叫.mp3" type="audio/mp3"></source>
+              </audio> </td> 
+             <td>
+              <audio controls=""> 
+               <source src="resources/demos/BD_FULL-MDN_K=4/vocal_学猫叫.mp3" type="audio/mp3"></source>
+              </audio> </td> 
+            </tr> 
+              
+           </tbody>
+          </table> 
+        </div>
+      </div>
+    </div>
+
    <div id="demo-paper" class="container blog-main"> 
     <h2 class="blog-post-title">Demos - The experiments in this paper</h2> 
     <p class="blog-post-meta">Last Update - May 19, 2020 by Haohe Liu</p> 
@@ -4717,108 +4818,7 @@
        </div> 
       </div> 
      </div> 
-     <hr /> 
-     <div class="container blog-main"> 
-      <h2 id="demo-full" class="blog-post-title">Demos - The best performance we get with full dataset</h2> 
-      <p class="blog-post-meta">Last Update - June 1st, 2020 by Haohe Liu</p> 
-      <p>We trained our model on additional data (Compared with MUSDB only) with 35.18 hours of pure vocal and 279.87 hours of pure music. Each of these experiments take approximately five days on a single GTX 1080Ti GPU. Finally we reach the following result.</p> 
-      <p>Due to the copyright issues, we can not present full length of each mixture. But we offer links for each song. Check the "<i class="fa fa-external-link"></i>" button behind each song to get access to the mixture.</p>
-      <!-- <h3 id="full-unet">UNET-5_K=4</h3>       --> 
-      <div class="panel-group" id="accordion"> 
 
-       <div class="panel panel-default"> 
-        <div class="panel-heading"> 
-         <h4 class="panel-title"> 
-          <div class="container"> 
-           <a data-toggle="collapse" data-parent="#accordion" href="#full-unet"> UNET-5_K=4 <p style="font-size: 12px">(click to expand)</p> </a> 
-          </div> </h4> 
-        </div> 
-        <div id="full-unet" class="panel-collapse collapse"> 
-         <div class="panel-body"> 
-          <table class="table table-striped"> 
-           <tbody>
-            <tr> 
-             <th>Song</th> 
-             <th>Accompaniments</th> 
-             <th>Vocal</th> 
-            </tr>
-            <tr> 
-            </tr>
-            <tr> 
-             <td>小幸运 <a href="https://music.163.com/#/song?id=422104315"><i class="fa fa-external-link"></i></a></td> 
-             <td>
-              <audio controls=""> 
-               <source src="resources/demos/BD_FULL-UNET-5_K=4/background_金玟岐 - 小幸运（Cover 田馥甄）.mp3" type="audio/mp3"></source>
-              </audio> </td> 
-             <td>
-              <audio controls=""> 
-               <source src="resources/demos/BD_FULL-UNET-5_K=4/vocal_金玟岐 - 小幸运（Cover 田馥甄）.mp3" type="audio/mp3"></source>
-              </audio> </td> 
-            </tr>   
-            <tr> 
-             <td>学猫叫 <a href="https://music.163.com/song?id=554191055"><i class="fa fa-external-link"></i></a></td> 
-             <td>
-              <audio controls=""> 
-               <source src="resources/demos/BD_FULL-UNET-5_K=4/background_学猫叫.mp3" type="audio/mp3"></source>
-              </audio> </td> 
-             <td>
-              <audio controls=""> 
-               <source src="resources/demos/BD_FULL-UNET-5_K=4/vocal_学猫叫.mp3" type="audio/mp3"></source>
-              </audio> </td> 
-            </tr> 
-            
-           </tbody>
-          </table> 
-        </div>
-      </div>
-
-
-
-      <div class="panel panel-default"> 
-        <div class="panel-heading"> 
-         <h4 class="panel-title"> 
-          <div class="container"> 
-           <a data-toggle="collapse" data-parent="#accordion" href="#full-mdn"> MDN_K=4 <p style="font-size: 12px">(click to expand)</p> </a> 
-          </div> </h4> 
-        </div> 
-        <div id="full-mdn" class="panel-collapse collapse"> 
-         <div class="panel-body"> 
-          <table class="table table-striped"> 
-           <tbody>
-            <tr> 
-             <th>Song</th> 
-             <th>Accompaniments</th> 
-             <th>Vocal</th> 
-            </tr>
-            <tr> 
-            </tr>
-            <tr> 
-             <td>小幸运 <a href="https://music.163.com/#/song?id=422104315"><i class="fa fa-external-link"></i></a></td> 
-             <td>
-              <audio controls=""> 
-               <source src="resources/demos/BD_FULL-MDN_K=4/background_金玟岐 - 小幸运（Cover 田馥甄）.mp3" type="audio/mp3"></source>
-              </audio> </td> 
-             <td>
-              <audio controls=""> 
-               <source src="resources/demos/BD_FULL-MDN_K=4/vocal_金玟岐 - 小幸运（Cover 田馥甄）.mp3" type="audio/mp3"></source>
-              </audio> </td> 
-            </tr> 
-            <tr> 
-             <td>学猫叫 <a href="https://music.163.com/song?id=554191055"><i class="fa fa-external-link"></i></a></td> 
-             <td>
-              <audio controls=""> 
-               <source src="resources/demos/BD_FULL-MDN_K=4/background_学猫叫.mp3" type="audio/mp3"></source>
-              </audio> </td> 
-             <td>
-              <audio controls=""> 
-               <source src="resources/demos/BD_FULL-MDN_K=4/vocal_学猫叫.mp3" type="audio/mp3"></source>
-              </audio> </td> 
-            </tr> 
-              
-           </tbody>
-          </table> 
-        </div>
-      </div>
 </div>
           
           <!-- </div> 
