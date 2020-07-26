@@ -27,7 +27,7 @@
       <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style>
-        .panel-heading{
+        .panel-heading{˙
 /*        height:100px;
 
         width:900px;*/
@@ -39,6 +39,9 @@
     }
     .table_of_content_h2{
       font-size: 17px;
+    }
+    .blog-post-title{
+        margin-bottom: 15px; 
     }
 
 </style>
@@ -100,7 +103,7 @@
             <p class="table_of_content_h2">
                 <script type="text/javascript">
                 document.getElementById("js_tab").innerHTML = js_tab(2)
-                </script> <a href="https://github.com/haoheliu/Subband-Music-Separation">Link to our source code</a>
+                </script> <a href="#code"> Link to our code</a>
             </p>
             <p class="table_of_content_h1">
                 <script type="text/javascript">
@@ -142,18 +145,24 @@
         <!-- <hr> -->
         <hr />
         <div class="container">
-            <h2 id="abstract" class="blog-post-title">Abstract</h2>
+            <h2 id="abstract" class="blog-post-title"><i class="fa fa-file"></i> Abstract</h2>
             <p style="font-size:20px"> This paper presents a new input format, channel-wise subband input (CWS), for convolutional neural network (CNN) based music source separation (MSS) models in the frequency domain. We aim to address the major issues in CNN-based high-resolution MSS model: high computational cost and weight sharing between distinctly different bands. Specifically in this paper, we decompose the input mixture spectra into several bands and concatenate them channel-wise as the model input. The proposed approach enables effective weight sharing in each subband and introduces more flexibility between channels. For comparison purposes, we perform voice and accompaniment separation (VAS) on models with different scales, architectures, and CWS settings. The result shows that the CWS input is beneficial in many aspects. Among all our experiments, it enables models to obtain a 6.9% performance gain on average. With even a smaller number of parameters, much smaller training data, and shorter training time, our MDenseNet with 8-bands CWS input still surpasses the original MMDenseNet with a large margin. CWS also reduces computational cost and training time to a large extent, which can considerably expedite the experiment process. </p>
             <!--   <p>
     Index Terms: voice and accompaniment separation, deep learning, subband, music source separation
   </p> -->
             <div>
-                <b>For more details, please refer to </b>
-                <a href="resources/paper/Paper-Channel-wise Subband Input for Better Voice and Accompaniment Separation on High Resolution Music.pdf" id="paper">
-                    our paper: <i style="font-size: 10px;" class="fa fa-external-link"></i>
+                <b style="font-size:20px">For more details, please refer to </b>
+                <a href="resources/paper/Paper-Channel-wise Subband Input for Better Voice and Accompaniment Separation on High Resolution Music.pdf" id="paper" style="font-size:20px">
+                    our paper <i style="font-size: 20px;" class="fa fa-external-link"></i>
                 </a>
             </div>
         </div>
+        <hr>
+        <div class="container">
+            <h2 id="code" class="blog-post-title"><i class="fa fa-code"></i> Code</h2>
+            <p style="font-size:20px"> We open-source our <a href="https://github.com/haoheliu/Subband-Music-Separation">code on github! <i class="fa fa-external-link"></i></a>
+        </div>
+
         <!-- <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=86 src="http://music.163.com/outchain/player?type=2&id=441437222&auto=1&height=66"></iframe> -->
         <hr />
         <div class="alert alert-danger" role="alert">
@@ -170,9 +179,10 @@
         <div class="alert alert-info" role="alert">
             <p style="font-size: 20px;"><i class="fa fa-heart"></i> Please allow up to two minutes for the audios to get ready, thanks for your patience!</p>
         </div>
+
         <hr>
         <div class="container blog-main">
-            <h2 id="demo-full" class="blog-post-title">Demos - The best performance we get with full dataset</h2>
+            <h2 id="demo-full" class="blog-post-title"><i class="fa fa-headphones"></i> Demos - The best performance we get with full dataset</h2>
             <p class="blog-post-meta">Last Update - June 1st, 2020 by Haohe Liu</p>
             <p>We trained our model on additional data (Compared with MUSDB only) with 35.18 hours of pure vocal and 279.87 hours of pure music. Each of these experiments take approximately five days on a single GTX 1080Ti GPU. Finally we reach the following result.</p>
             <p>Due to the copyright issues, we can not present full length of each mixture. But we offer links for each song. Check the "<i class="fa fa-external-link"></i>" button behind each song to get access to the mixture.</p>
@@ -280,7 +290,7 @@
                 </div>
                 <hr>
                 <div id="demo-paper" class="container blog-main">
-                    <h2 class="blog-post-title">Demos - The experiments in this paper</h2>
+                    <h2 class="blog-post-title"><i class="fa fa-headphones"></i> Demos - The experiments in this paper</h2>
                     <p class="blog-post-meta">Last Update - May 19, 2020 by Haohe Liu</p>
                     <p><b>Click on the music you'd like to listen and you will see a full list of experiment results.</b></p>
                     <div class="panel-group" id="accordion">
